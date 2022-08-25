@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+ul,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font-family-paragraph;
+    display: flex;
+    justify-content: column;
+    margin: 0;
+    // line-height: 1.6;
+    background-color: $color-bg-primary;
+}

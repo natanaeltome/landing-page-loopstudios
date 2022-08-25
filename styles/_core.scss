@@ -1,0 +1,70 @@
+    // Variables
+    $color-bg-primary: hsl(0, 0%, 95%);
+    $color-bg-footer: hsl(0, 0%, 0%);
+    $color-text-primary: hsl(0, 0%, 100%);
+    $color-text-secondary: hsl(0, 0%, 55%);
+    $color-text-tertiary: hsl(0, 0%, 41%);
+    $color-bg-button-primary: hsl(0, 0%, 0%);
+    $color-bg-button-secondary: hsl(0, 0%, 95%);
+
+    $font-size-hero-title: 2.6rem;
+    $font-size-content-title: 2.5rem;
+    $font-size-creation-title: 2.5rem;
+    $font-size-paragraph: 15px;
+    $font-size-button: 1rem;
+    $font-family-title: 'Alata', sans-serif;
+    $font-family-paragraph: 'Josefin Sans', sans-serif;
+
+    // Media Query variables
+    $breakpoint-sm: 375px;
+    $breakpoint-sm: 576px;
+    $breakpoint-md: 768px;
+    $breakpoint-lg: 992px;
+    $breakpoint-xl: 1200px;
+    $breakpoint-xxl: 1440px;
+
+    // Mixins
+
+@mixin breakpoint($point) {
+    @if $point==xsm {
+        @media (min-width: $breakpoint-xsm) {
+            @content;
+        }
+    }
+
+    @else if $point==sm {
+        @media (min-width: $breakpoint-sm) {
+            @content;
+        }
+    }
+
+    @else if $point==md {
+        @media (min-width: $breakpoint-md) {
+            @content;
+        }
+    }
+
+    @else if $point==lg {
+        @media (min-width: $breakpoint-lg) {
+            @content;
+        }
+    }
+
+    @else if $point==xl {
+        @media (min-width: $breakpoint-xl) {
+            @content;
+        }
+    }
+
+    @else if $point==xxl {
+        @media (min-width: $breakpoint-xxl) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (min-width: '#{$point}') {
+            @content
+        }
+    }
+}

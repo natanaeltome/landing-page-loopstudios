@@ -1,0 +1,52 @@
+.hero__img {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding: 3rem 1.5rem;
+    background-image: url("../assets/mobile/image-hero.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.hamburger{
+    
+}
+
+.hero__title {
+    align-self: center;
+    color: $color-text-primary;
+    font-size: $font-size-hero-title;
+    text-transform: uppercase;
+    padding: 1.5rem;
+    border: solid white 2px;
+}
+
+
+
+// .container {
+//     display: flex;
+//     border-radius: 10px;
+//     overflow: hidden;
+
+//     @include breakpoint(lg) {
+//         flex-direction: column;
+//     }
+// }
+
+// .card--sedan {
+//     @include card();
+//     background-color: $color-card-bg-sedan;
+// }
+
+// .card__button--luxury {
+//     @extend .card__button;
+//     color: $color-card-bg-luxury;
+// }
