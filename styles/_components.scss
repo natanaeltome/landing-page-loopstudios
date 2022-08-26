@@ -2,51 +2,182 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    padding: 3rem 1.5rem;
+    padding: 5vh 5vw 5vh 5vw;
     background-image: url("../assets/mobile/image-hero.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
+
+    @include breakpoint(md) {
+        padding: 5vh 10vw 0 10vw;
+        background-image: url("../assets/desktop/image-hero.jpg");
+    }
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav-menu {
+    display: none;
+    justify-content: space-between;
+    align-self: center;
+
+    @include breakpoint(md) {
+        display: flex;
+    }
     
 }
 
+.nav-item {
+    font-size: $font-size-nav;
+    padding-left: 2rem;
+}
+
+.nav-link{
+    font-size: $font-size-nav;
+    color: $color-text-primary;
+}
+
 .hamburger{
+    cursor: pointer;
+    @include breakpoint(md) {
+        display: none;
+    }
     
 }
 
 .hero__title {
     align-self: center;
     color: $color-text-primary;
-    font-size: $font-size-hero-title;
+    font-size: clamp($font-size-mobile-hero-title, 0.9209rem + 7.1642vw, 3.5rem);
+    font-family: $font-family-hero-title;
     text-transform: uppercase;
-    padding: 1.5rem;
+    line-height: clamp(2.3rem, 0.9940rem + 5.5721vw, 3rem);
+    padding: 1.6rem;
+    margin: 20vh 0 20vh 0;
+    max-width: 450px;
     border: solid white 2px;
+
+    @include breakpoint(md) {
+        align-self: flex-start;
+        font-size: $font-size-desktop-hero-title;
+        line-height: 4rem;
+        max-width: 650px;
+    }
 }
 
+.main-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 5vw;
 
+    @include breakpoint(lg) {
+        padding: 5rem 10vw;
+    }
+}
 
-// .container {
-//     display: flex;
-//     border-radius: 10px;
-//     overflow: hidden;
+.main-title {
+    font-size: $font-size-mobile-main-title;
+    font-family: $font-family-main-title;
+    padding: 3rem 10vw 1rem 10vw;
+    text-align: center;
+    text-transform: uppercase;
+}
 
-//     @include breakpoint(lg) {
-//         flex-direction: column;
-//     }
-// }
+.highlight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-// .card--sedan {
-//     @include card();
-//     background-color: $color-card-bg-sedan;
-// }
+    @include breakpoint(lg) {
 
-// .card__button--luxury {
-//     @extend .card__button;
-//     color: $color-card-bg-luxury;
-// }
+        flex-direction: row;
+    }
+}
+
+.highlight__img {
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+}
+
+.highlight__text {
+    text-align: center;
+    color: $color-text-secondary;
+    padding: 0 5vw 3rem 5vw;
+}
+
+.creations {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+    width: 100%;
+}
+
+.creations__img-link{
+    width: 100%;
+    height: auto;
+    max-width: 450px;
+}
+
+.creations__img-link:hover{
+    opacity: 0.5;
+}
+
+.creations__button{
+    font-size: $font-size-button;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 10px;
+    padding: 10px 50px;
+    background-color: $color-bg-button-inactive;
+    color: $color-text-button-inactive;
+    border: solid 2px black;
+}
+
+.creations__button:hover{
+    background-color: $color-bg-button-active;
+    color: $color-text-button-active;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-bg-footer;
+    padding: 3rem 5vw;
+
+    @include breakpoint(lg) {
+        padding: 3rem 10vw;
+    }
+}
+
+.footer__menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.2rem;
+    padding: 3rem 0;
+}
+
+.footer__link{
+    font-size: $font-size-footer;
+    color: $color-text-primary;
+}
+
+.footer__icon{
+    padding: 0 10px 20px 0;
+}
+
+.footer__copyright{
+    font-size: $font-size-footer;
+    color: $color-text-secondary;
+}

@@ -11,16 +11,27 @@ h3,
 p,
 li,
 ul,
-a {
+a,
+img {
     margin: 0;
     padding: 0;
 }
 
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration: none;
+}
+
 body {
-    font-family: $font-family-paragraph;
     display: flex;
-    justify-content: column;
-    margin: 0;
-    // line-height: 1.6;
+    flex-direction: column;
+    font-family: $font-family-paragraph;
     background-color: $color-bg-primary;
 }

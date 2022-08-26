@@ -4,22 +4,29 @@
     $color-text-primary: hsl(0, 0%, 100%);
     $color-text-secondary: hsl(0, 0%, 55%);
     $color-text-tertiary: hsl(0, 0%, 41%);
-    $color-bg-button-primary: hsl(0, 0%, 0%);
-    $color-bg-button-secondary: hsl(0, 0%, 95%);
+    $color-bg-button-active: hsl(0, 0%, 0%);
+    $color-bg-button-inactive: hsl(0, 0%, 95%);
+    $color-text-button-active: hsl(0, 0%, 95%);
+    $color-text-button-inactive: hsl(0, 0%, 0%);
 
-    $font-size-hero-title: 2.6rem;
-    $font-size-content-title: 2.5rem;
-    $font-size-creation-title: 2.5rem;
+    $font-size-mobile-hero-title: 2.6rem;
+    $font-size-mobile-main-title: 1.8rem;
+    $font-size-mobile-creations-title: 1.2rem;
+    $font-size-desktop-hero-title: 4rem;
     $font-size-paragraph: 15px;
     $font-size-button: 1rem;
-    $font-family-title: 'Alata', sans-serif;
-    $font-family-paragraph: 'Josefin Sans', sans-serif;
+    $font-size-nav: 1rem;
+    $font-size-footer: 0.9rem;
+    $font-family-hero-title: 'Josefin Sans', sans-serif;
+    $font-family-main-title: 'Josefin Sans', sans-serif;
+    $font-family-creations-title: 'Josefin Sans', sans-serif;
+    $font-family-paragraph: 'Alata', sans-serif;
 
     // Media Query variables
-    $breakpoint-sm: 375px;
+    $breakpoint-sm: 395px;
     $breakpoint-sm: 576px;
     $breakpoint-md: 768px;
-    $breakpoint-lg: 992px;
+    $breakpoint-lg: 900px;
     $breakpoint-xl: 1200px;
     $breakpoint-xxl: 1440px;
 
